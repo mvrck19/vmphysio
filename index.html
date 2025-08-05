@@ -1,358 +1,311 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="el">
-
 <head>
-  <meta charset="utf-8">
-  <meta name="theme-color" content="#9ECAD6">
-  <meta name="google-site-verification" content="7_qMBWg5i3ufObbgjCMYp_zLXoAcILX0xbmYCUjTtbY" />
-  <link rel="alternate" hreflang="el" href="https://vmphysio.gr" />
-  <title>Manolaki Physio - Φυσικοθεραπεία Μανωλάκη Βασιλική</title>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- SEO Meta Tags -->
-  <meta name="description"
-    content="Εξειδικευμένες υπηρεσίες φυσικοθεραπείας στην Xίο. Μυοσκελετική, νευρολογική αποκατάσταση, καρδιοαναπνευστική φυσικοθεραπεία και περισσότερα.">
-  <meta name="keywords"
-    content="φυσικοθεραπεία Χίος, φυσικοθεραπευτής Χίος, μυοσκελετική φυσικοθεραπεία Χίος, νευρολογική αποκατάσταση Χίος, καρδιοαναπνευστική φυσικοθεραπεία, λεμφική παροχέτευση, θεραπευτική μάλαξη, φυσικοθεραπευτήριο Χίος, αποκατάσταση Χίος, Βασιλική Μανωλάκη, physiotherapy Chios">
-  <meta name="author" content="Βασιλική Μανωλάκη">
-
-  <!-- Open Graph Meta Tags for social sharing -->
-  <meta property="og:title" content="Manolaki Physio - Φυσικοθεραπεία Μανωλάκη Βασιλική">
-  <meta property="og:description" content="Εξειδικευμένες υπηρεσίες φυσικοθεραπείας στην Χίο">
-  <meta property="og:image" content="logo.jpg">
-  <meta property="og:url" content="https://vmphysio.gr">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Manolaki Physio - Φυσικοθεραπεία Μανωλάκη Βασιλική">
-  <meta name="twitter:description" content="Εξειδικευμένες υπηρεσίες φυσικοθεραπείας στην Χίο">
-  <meta name="twitter:image" content="logo.jpg">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-  <!-- Fonts -->
-
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet"> -->
-
-
-
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Βασιλική Μανωλάκη",
-  "jobTitle": "Φυσικοθεραπεύτρια",
-  "telephone": "+306947630148",
-  "url": "https://vmphysio.gr",
-  "areaServed": ["Χίος"],
-  "medicalSpecialty": "Physiotherapy",
-  "serviceType": [
-    "Φυσικοθεραπεία",
-    "Μυοσκελετική φυσικοθεραπεία",
-    "Νευρολογική φυσικοθεραπεία",
-    "Καρδιοαναπνευστική φυσικοθεραπεία",
-    "Φυσικοθεραπεία πυελικού εδάφους",
-    "Λεμφική παροχέτευση",
-    "Θεραπευτική μάλαξη"
-  ]
-}
-</script>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="preload" as="image" href="8.jpg">
-
+  <title>Manolaki Physio Portfolio</title>
   <style>
-  
+    :root {
+      --primary: #9ECAD6;
+      --primary-dark: #7BA7B3;
+      --bg-light: #f9f9f9;
+      --bg-dark: #374151;
+      --text-main: #222;
+      --text-light: #fff;
+      --accent: #60a5fa;
+      --radius: 1rem;
+      --shadow: 0 4px 24px rgba(80,120,140,0.10);
+      --transition: all 0.3s cubic-bezier(.4,0,.2,1);
+      --max-width: 900px;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-main);
+      min-height: 100vh;
+    }
+    /* Navbar */
+    .navbar {
+      background: var(--primary);
+      padding: 1rem 0;
+      box-shadow: 0 2px 8px rgba(80,120,140,0.07);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .navbar__container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+    }
+    .navbar__brand {
+      color: var(--text-light);
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+    .navbar__list {
+      list-style: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      gap: 1.5rem;
+    }
+    .navbar__link {
+      color: var(--text-light);
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 99px;
+      transition: var(--transition);
+    }
+    .navbar__link:hover,
+    .navbar__link--active {
+      background: var(--accent);
+      color: var(--text-light);
+    }
 
-:root {
-  /* Color Palette */
-  --primary-color: #9ECAD6;
-  --primary-dark: #7BA7B3;
-  --primary-light: #C1E0E8;
-  --secondary-color: #333333;
-  --secondary-dark: #222222;
-  --secondary-light: #444444;
-  
-  /* Background Colors */
-  --bg-main: #fafafa;
-  --bg-card: #f9f9f9;
-  --bg-hover: #f0f0f0;
-  
-  /* Text Colors */
-  --text-primary: #212121;
-  --text-secondary: #666666;
-  --text-light: #ffffff;
-  
-  /* Accent Colors */
-  --accent-success: #4CAF50;
-  --accent-info: #2196F3;
-  --accent-warning: #FFC107;
-  
-  /* Spacing */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  
-  /* Border Radius */
-  --border-radius-sm: 0.3125rem;
-  --border-radius-md: 0.625rem;
-  --border-radius-lg: 0.9375rem;
-  
-  /* Shadows */
-  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
-  --shadow-md: 0 4px 8px rgba(0,0,0,0.1);
-  --shadow-lg: 0 8px 16px rgba(0,0,0,0.15);
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(120deg, var(--primary) 0%, #e3f6fb 100%);
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 4rem 1rem 2rem 1rem;
+    }
+    .hero__img {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 6px 32px rgba(0,0,0,0.10);
+      margin-bottom: 1.2rem;
+      border: 5px solid #fff;
+      background: #fff;
+    }
+    .hero__title {
+      font-size: 2.1rem;
+      letter-spacing: 1px;
+      font-weight: bold;
+      margin: 0.2em 0 0.1em 0;
+      color: var(--text-main);
+    }
+    .hero__subtitle {
+      font-size: 1.2rem;
+      color: #406370;
+      margin: 0.3em 0;
+      font-weight: 500;
+    }
+    .hero__desc {
+      color: #406370;
+      margin: 0.7em 0;
+      font-size: 1.1rem;
+    }
 
-  
-}
+    /* About section */
+    section {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 2.8rem 1rem;
+    }
+    .section-title {
+      font-size: 1.7rem;
+      color: var(--primary-dark);
+      margin-bottom: 1.1rem;
+      font-weight: 600;
+      text-align: center;
+    }
+    .about__content {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2.2rem 1.2rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--text-main);
+      max-width: 720px;
+      margin: auto;
+    }
 
-/* Base Styles */
-html, body {
-  height: 100%;
-  margin: 0;
-  font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  background: var(--bg-main);
-  color: var(--text-primary);
-  line-height: 1.6;
-}
+    /* Services */
+    .services-list {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: 1fr;
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .service-card {
+      background: #fff;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(130,160,180,0.13);
+    }
+    .service-title {
+      font-weight: bold;
+      color: var(--primary-dark);
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+    .service-desc {
+      color: #3b4b58;
+      font-size: 1rem;
+    }
 
-/* Typography */
-.responsive-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 300;
-  line-height: 1.2;
-  letter-spacing: -0.01562em;
-}
-.responsive-subtitle {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  font-weight: 400;
-  line-height: 1.3;
-}
-
-/* Layout */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: var(--spacing-md);
-  text-align: center;
-}
-
-/* Common Elements */
-img {
-  max-width: 100%;
-  border-radius: var(--border-radius-md);
-  box-shadow: var(--shadow-sm);
-}
-
-img.small {
-  width: 2em;
-  height: 2em;
-}
-
-img.medium {
-  width: auto;
-  height: auto;
-}
-
-img.large {
-  width: 8em;
-  height: 8em;
-}
-
-img.responsive {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-a {
-  color: var(--primary-color);
-  text-decoration: none;
-  border-radius: var(--border-radius-sm);
-  transition: all 0.3s ease;
-}
-
-a:hover {
-  color: var(--primary-dark);
-}
-
-/* Buttons and Links */
-.button-link {
-  display: inline-block;
-  padding: var(--spacing-sm) var(--spacing-lg);
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  border-radius: var(--border-radius-sm);
-  transition: all 0.3s ease;
-}
-
-.button-link:hover {
-  background-color: var(--primary-dark);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
-}
-
-/* Cards and Sections */
-.banner,
-.about,
-.contact,
-.services-container,
-.specialties-container,
-.cv-section,
-.service,
-.education-card {
-  background: var(--bg-card);
-  border-radius: var(--border-radius-md);
-  padding: var(--spacing-lg);
-  margin-bottom: var(--spacing-lg);
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.banner:hover,
-.service:hover,
-.education-card:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-md);
-}
-
-/* Navigation */
-nav {
-  background-color: var(--secondary-color);
-  padding: var(--spacing-md) 0;
-  box-shadow: var(--shadow-md);
-}
-
-nav a {
-  color: var(--text-light);
-  font-size: 1.2rem;
-  margin: 0 var(--spacing-md);
-}
-
-nav a:hover {
-  color: var(--primary-light);
-}
-
-/* Dropdown Menu */
-.services-dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-btn {
-  background: none;
-  border: none;
-  color: var(--text-light);
-  font-size: 1.2rem;
-  cursor: pointer;
-  padding: var(--spacing-sm) var(--spacing-md);
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: var(--secondary-color);
-  min-width: 250px;
-  box-shadow: var(--shadow-lg);
-  border-radius: var(--border-radius-md);
-  z-index: 1000;
-}
-
-.services-dropdown:hover .dropdown-content,
-.services-dropdown:focus-within .dropdown-content {
-  display: block;
-}
-
-.dropdown-content a {
-  color: var(--text-light);
-  padding: var(--spacing-md);
-  display: block;
-  font-size: 1rem;
-  border-bottom: 1px solid var(--secondary-light);
-}
-
-.dropdown-content a:last-child {
-  border-bottom: none;
-}
-
-.dropdown-content a:hover {
-  background-color: var(--secondary-light);
-  color: var(--primary-light);
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-  :root {
-    --spacing-md: 0.75rem;
-    --spacing-lg: 1rem;
-  }
-
-  .container, 
-  .banner, 
-  .about, 
-  .contact, 
-  .services-container,
-  .specialties-container, 
-  .cv-section, 
-  .service, 
-  .education-card {
-    padding: var(--spacing-md);
-  }
-
-  nav {
-    flex-direction: column;
-    padding: var(--spacing-sm);
-  }
-
-  .services-dropdown {
-    width: 100%;
-  }
-
-  .dropdown-content {
-    width: 100%;
-    position: static;
-  }
-
-  .dropdown-btn,
-  nav a {
-    display: block;
-    width: 100%;
-    text-align: center;
-    margin: var(--spacing-xs) 0;
-  }
-}
-
-
-  </style
-  
+    /* Contact */
+    .contact-block {
+      background: var(--primary);
+      color: var(--text-light);
+      border-radius: var(--radius);
+      padding: 1.8rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(80,120,140,0.09);
+      margin-bottom: 2rem;
+    }
+    .contact-block a {
+      color: #fff;
+      text-decoration: underline;
+      margin: 0 0.5em;
+      font-weight: 500;
+    }
+    .contact-block a:hover {
+      text-decoration: none;
+      color: #406370;
+    }
+    /* Responsive */
+    @media (min-width: 600px) {
+      .hero__title { font-size: 2.5rem; }
+      .hero__img { width: 190px; height: 190px; }
+      section { padding: 3.2rem 2rem; }
+      .about__content { padding: 2.8rem 2.5rem; }
+      .services-list { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 900px) {
+      body { font-size: 1.1rem; }
+      .hero { padding-top: 5rem; }
+      .services-list { grid-template-columns: 1fr 1fr 1fr; }
+      .about__content, .services-list { font-size: 1.08rem; }
+    }
+    /* Animations with fade-in/move up */
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity 0.7s cubic-bezier(.5,0,.1,1), 
+                  transform 0.7s cubic-bezier(.5,0,.1,1);
+      will-change: opacity, transform;
+    }
+    [data-animate].visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
 </head>
-
 <body>
-  <nav>
-    <a href="index.html"><img src="logo.jpg" alt="Home" class="small"></a>
-    <a href="services.html">Υπηρεσίες</a>
-    <a href="about.html">Σχετικά</a>
-    <a href="contact.html">Επικοινωνία</a>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar__container">
+      <a class="navbar__brand" href="#hero">Manolaki Physio</a>
+      <ul class="navbar__list">
+        <li><a class="navbar__link navbar__link--active" href="#hero">Αρχική</a></li>
+        <li><a class="navbar__link" href="#about">Σχετικά</a></li>
+        <li><a class="navbar__link" href="#services">Υπηρεσίες</a></li>
+        <li><a class="navbar__link" href="#contact">Επικοινωνία</a></li>
+      </ul>
+    </div>
   </nav>
-  <div class="container">
-    <div class="banner">
-      <h1 class="responsive-title">Βασιλική Μανωλάκη</h1>
-      <h2 class="responsive-subtitle">Φυσικοθεραπεύτρια</h2>
 
-      <div class="image-placeholder">
-      <img src="8.jpg" class="medium" alt="Logo">
+  <!-- Hero Section -->
+  <div class="hero" id="hero">
+    <img src="8.jpg" alt="Βασιλική Μανωλάκη" class="hero__img" data-animate>
+    <h1 class="hero__title" data-animate>Βασιλική Μανωλάκη</h1>
+    <div class="hero__subtitle" data-animate>Φυσικοθεραπεύτρια</div>
+    <div class="hero__desc" data-animate>Εξειδικευμένη Φροντίδα Υγείας και Αποκατάστασης</div>
+    <div style="margin-top:2rem" data-animate>
+      <a href="#contact" class="navbar__link" style="background:var(--accent);color:#fff;text-decoration:none;padding:0.7em 1.5em;border-radius:99px;font-weight:500;">Επικοινωνία</a>
     </div>
-      <p class="primary-text">Εξειδικευμένη Φροντίδα Υγείας και Αποκατάστασης</p>
-      <a href="tel:+306947630148" class="button-link">6947630148</a>
-    </div>
-    
   </div>
-</body>
 
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-title" data-animate>Σχετικά</div>
+    <div class="about__content" data-animate>
+      Η Βασιλική Μανωλάκη είναι πτυχιούχος Φυσικοθεραπεύτρια, απόφοιτη του Πανεπιστημίου Θεσσαλίας (πρώην ΤΕΙ). Διαθέτει πολυετή και πολύτιμη επαγγελματική εμπειρία, την οποία απέκτησε μέσα από συνεργασίες με δημόσια νοσοκομεία, κέντρα αποκατάστασης και ιδιωτικά φυσικοθεραπευτήρια.<br><br>
+      Επενδύει διαρκώς στη συνεχιζόμενη επαγγελματική της επιμόρφωση, παρακολουθώντας πληθώρα εξειδικευμένων σεμιναρίων και διευρύνοντας διαρκώς τις γνώσεις και δεξιότητές της. Με σεβασμό στον άνθρωπο και έμφαση στις επιστημονικά τεκμηριωμένες πρακτικές, σχεδιάζει εξατομικευμένα θεραπευτικά προγράμματα για κάθε ασθενή.<br><br>
+      Σκοπός της είναι η συνολική ενίσχυση της ποιότητας ζωής, μέσα από σχέσεις εμπιστοσύνης, φροντίδας και διαρκούς εξέλιξης.
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="section-title" data-animate>Υπηρεσίες</div>
+    <div class="services-list" data-animate>
+      <div class="service-card">
+        <div class="service-title">Μυοσκελετική Φυσικοθεραπεία</div>
+        <div class="service-desc">
+          Αξιολόγηση, πρόληψη και αποκατάσταση προβλημάτων του μυοσκελετικού συστήματος για καλύτερη κινητικότητα, λιγότερο πόνο και επιστροφή στις καθημερινές δραστηριότητες.
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Εξειδικευμένες Ασκήσεις & Αποκατάσταση</div>
+        <div class="service-desc">
+          Προσαρμοσμένα προγράμματα θεραπευτικής άσκησης για αθλητές, ηλικιωμένους και άτομα με χρόνιες παθήσεις.
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-title">Συμβουλευτική & Συνεχής Υποστήριξη</div>
+        <div class="service-desc">
+          Προσέγγιση με επίκεντρο τον άνθρωπο, παρέχοντας υποστήριξη με πρακτικές συμβουλές για ολοκληρωμένη φροντίδα υγείας και ευεξία.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-title" data-animate>Επικοινωνία</div>
+    <div class="contact-block" data-animate>
+      <div><strong>Τηλέφωνο:</strong> <a href="tel:+306947630148">6947630148</a></div>
+      <div><strong>Email:</strong> <a href="mailto:vmanolaki.physio@gmail.com">vmanolaki.physio@gmail.com</a></div>
+      <div style="margin-top:0.5em;">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a> | 
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- <footer style="text-align:center;padding:1.5rem 0;background:var(--primary);color:var(--text-light);">
+    &copy; 2025 Manolaki Physio
+  </footer> -->
+  <script>
+    function animateOnScroll() {
+      document.querySelectorAll('[data-animate]').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < (window.innerHeight - 50)) {
+          el.classList.add('visible');
+        }
+      });
+    }
+    document.addEventListener('DOMContentLoaded', animateOnScroll);
+    window.addEventListener('scroll', animateOnScroll);
+  </script>
+</body>
 </html>
